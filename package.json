@@ -1,0 +1,27 @@
+{
+  "name": "DiscordJS V12",
+  "version": "0.0.3",
+  "description": "Infrastructure for the v12 of Discord Js.",
+  "main": "dc.js",
+  "scripts": {
+    "start": "node dc.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.2",
+    "discord.js": "^12.3.1",
+    "quick.db": "^7.1.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/discordjs-version12"
+  },
+  "license": "MIT",
+  "keywords": [
+    "discord bot",
+    "v12",
+    "discord.js"
+  ]
+}
