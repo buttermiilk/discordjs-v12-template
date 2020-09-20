@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
-  exports.run: (client, message, args) => {
+  exports.run = async (client, message, args) => {
 
     let heartbeat = 0;
 
@@ -36,6 +36,6 @@ function roundTo(n, digits) {
     return n;
 }
 
-    exports.help => {
+    exports.help = {
       name: 'ping'
     }
