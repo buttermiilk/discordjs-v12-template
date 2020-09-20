@@ -1,5 +1,5 @@
 {
-  "author": "Your ID.",
-  "prefix": "Your bot prefix.",
-  "key": "Your bot token."
+  "author": "Your Discord ID.",
+  "prefix": "Your bot's prefix.",
+  "key": "Your bot's token."
 }
