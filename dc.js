@@ -1,4 +1,3 @@
-/* Identification */
 const Discord = require('discord.js');
 const Client = new Discord.Client();
 const settings = require('./settings.json');
@@ -9,23 +8,22 @@ const app = express();
 
 let prefix = settings.prefix;
 
-/* Listens */
 app.get("/", (req, res) => {
-  res.send("I Logged!");
+  res.send("I'm alive.");
 });
 
-/* Event Loader */
+//Load events.
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach((file) => {
     const event = require(`./events/${file}`);
     let eventName = file.split(".")[0];
-    console.log(`${eventName} is loaded for events.`);
+    console.log(`${eventName} loaded.`);
     Client.on(eventName, event.bind(null, Client));
   });
 });
 
-/* Commands Loader */
+//Load commands.
 Client.commands = new Discord.Collection();
 Client.aliases = new Discord.Collection();
 
@@ -45,20 +43,12 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-/* Ready */
+//Logging if the bot is online.
 Client.on("ready", () => {
   console.log(`${Client.user.tag} is online.`);
-  Client.user.setActivity(`${prefix}help`);
-  Client.user.setStatus(`idle`)
+  Client.user.setActivity(`${prefix}help`, { type: PLAYING });
+  Client.user.setStatus(`online`)
 });
 
-/* Login */
-Client.login(settings.key); //Discord: lewis#8996
-
-/* ------------------------------------------------------------------------------ */
-/* Commands in Main File */
-Client.on("message", message => {
-  if (message.content.toLowerCase() === 'hi') return message.reply(`${message.author.username} Hi!`)
-});
-
-//->...
+//Login.
+Client.login(settings.key)
