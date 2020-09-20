@@ -1,10 +1,10 @@
 {
-  "name": "DiscordJS V12",
-  "version": "0.0.3",
-  "description": "Infrastructure for the v12 of Discord Js.",
-  "main": "dc.js",
+  "name": "discordjs-v12-template",
+  "version": "1.0.0",
+  "description": "A Discord.js v12 template.",
+  "main": "index.js",
   "scripts": {
-    "start": "node dc.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -16,7 +16,7 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/discordjs-version12"
+    "url": "https://github.com/TheFateAkira/discordjs-v12-template"
   },
   "license": "MIT",
   "keywords": [
