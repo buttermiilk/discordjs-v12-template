@@ -15,8 +15,6 @@ Fill in the fields in `settings.json`
 
 Finally run the bot using `node index.js` (use pm2/nodemon, whatever you want)
 
-Self-hosting is more aimed towards contributing rather than running your own instance.
-
 Be sure to join our [support server](https://discord.gg/bJemK26) for feedback and discussions when contributing or just to hang out. We like to meet new people so come and say hi!
 
 
