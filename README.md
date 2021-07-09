@@ -15,9 +15,6 @@ Fill in the fields in `settings.json`
 
 Finally run the bot using `node index.js` (use pm2/nodemon, whatever you want)
 
-Be sure to join our [support server](https://discord.gg/bJemK26) for feedback and discussions when contributing or just to hang out. We like to meet new people so come and say hi!
-
-
 ## License
 This code can be used for any purposes under the [MIT License](LICENSE)
 
