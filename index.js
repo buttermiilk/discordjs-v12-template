@@ -46,7 +46,7 @@ fs.readdir("./commands/", (err, files) => {
 //Logging if the bot is online.
 Client.on("ready", () => {
   console.log(`${Client.user.tag} is online.`);
-  Client.user.setActivity(`${prefix}help`, { type: PLAYING });
+  Client.user.setActivity(`${prefix}help`, { type: "PLAYING" });
   Client.user.setStatus(`online`)
 });
 
