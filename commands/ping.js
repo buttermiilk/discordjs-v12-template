@@ -1,22 +1,17 @@
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
-  exports.run = async (client, message, args) => {
-
+exports.run = async (client, message, args) => {
     let heartbeat = 0;
-
     client.ws.shards.each( shard => {
-
       heartbeat += shard.ping
-
     })
 
     message.channel.send('Pinging...').then( m => {
       return m.edit("Pong!", new MessageEmbed().setDescription(`⏳ ${roundTo(client.ws.ping,2)} ms\n\n📤 ${roundTo(m.createdAt - message.createdAt)} ms\n\n💓 ${roundTo(heartbeat / client.ws.shards.size)} ms`)
       .setColor("GREY")
-    })
-  }
-}
+    )}
+  )}
 
 function roundTo(n, digits) {
     var negative = false;
@@ -36,6 +31,6 @@ function roundTo(n, digits) {
     return n;
 }
 
-    exports.help = {
-      name: 'ping'
-    }
+exports.help = {
+  name: 'ping'
+}
